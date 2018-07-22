@@ -16,7 +16,7 @@ class EmailParser
     parsed_emails = @str_emails.split(" ")
     parsed_emails.map do |email|
       if email.end_with?(",")
-        email.chop!
+        email.chop
       end
     end
     return parsed_emails.uniq
