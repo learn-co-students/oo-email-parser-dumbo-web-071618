@@ -5,4 +5,14 @@
 
 class EmailParser
     
+    attr_reader :emails
+    
+    def initialize(str)
+        @emails = str.split(/[\s|\,\s|\,]/).reject {|el| el.empty?}.uniq
+    end
+
+    def parse
+        @emails
+    end
+
 end
